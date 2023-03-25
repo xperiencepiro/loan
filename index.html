@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Personal loan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /*header*/
+
+* {
+    margin: 0%;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(228, 96, 122);
+  }
+
+  li {
+    list-style: none;
+  }
+
+  header {
+    background: linear-gradient(
+      to top,
+      rgb(216, 212, 212) 25%,
+      #c5cacc 50%
+    );
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+  }
+
+  header h1 {
+    color: rgb(228, 96, 122);
+    font-size: 50px;
+    text-shadow: 2px 2px 2px #000;
+  }
+
+  #navbar {
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  header ul{
+    display: flex;
+  }
+
+  header ul li{
+    margin: 5px;
+  }
+
+  header ul li:hover {
+    background-color: #fff;
+    transition: 1s;
+  }
+
+  /*main*/
+
+  main {
+    position: relative;
+    width: 100%;
+  }
+
+  #section1 {
+    background: linear-gradient(
+      to top,
+      rgb(151, 135, 135) 44%,
+      rgb(217, 217, 235) 64%
+    );
+    height: 40px;
+    width: 100%;
+    text-shadow: 2px 2px 2px rgb(255, 254, 254);
+    overflow-x: hidden;
+    display: flex;
+  }
+
+  #section1_text{
+    width: 100%;
+    animation: advert_text 30s infinite 3s alternate;
+    transform: translateX(-37%);
+    display: flex;
+  }
+
+  #section1_text p {
+    color: #473d3d;
+  }
+
+  @keyframes advert_text {
+    from {
+      transform: translateX(-37%);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  #section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    justify-content: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #formdiv {
+    margin: 50px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .inputp {
+    text-align: left;
+  }
+
+  .inputd {
+    text-align: right;
+  }
+
+  #section2 h2 {
+    text-decoration: underline;
+    color: rgb(228, 96, 122);
+  }
+
+  input {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    text-align: right;
+  }
+
+  input::placeholder {
+    text-align: right;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  input::placeholder {
+    color: rgb(228, 96, 122);
+  }
+
+  #button {
+    border: outset;
+    width: 100px;
+    height: 30px;
+    color: rgb(228, 96, 122);
+    margin: 30px 0px;
+    text-align: center;
+  }
+
+  #section3 h2 {
+    color: rgb(228, 96, 122);
+  }
+
+  #section3div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #testimonial {
+    background-color: rgba(250, 235, 215, 0);
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+  }
+
+  #testify {
+    height: 200px;
+    width: 200px;
+  }
+
+  #testimonial img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+    clip-path: circle(50%);
+    z-index: -1;
+  }
+
+  footer {
+    background-color: rgb(8, 8, 8);
+    color: #fff;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+  }
+  
+  @media  (max-width: 375px), (max-width: 414px) {
+    header{
+       width: 100%;
+    }
+    header h1 {
+      font-size: xx-large;
+    }
+
+    #section2 h2{
+        font-size: medium;
+    }
+
+    #formdiv{
+        font-size: small;
+    }
+
+    #section3 h2{
+        font-size: medium;
+    }
+
+    #section3div{
+        font-size: small;
+    }
+
+    #testify{
+        width: 150px;
+    }
+
+    #testimonial img{
+        width: 70px;
+        height: 70px;
+    }
+    
+    footer div{
+        font-size: small;
+    }
+  }
+
+  @media  (min-width: 280px) {
+    header{
+        width: 100%;
+     }
+     header h1 {
+       font-size: large;
+     }
+
+     header ul li{
+        font-size: x-small;
+     }
+
+     #section1{
+        height: 20px;
+     }
+
+     #section1_text p{
+        font-size: small;
+     }
+ 
+     #section2 h2{
+         font-size: small;
+     }
+ 
+     #formdiv{
+         font-size: x-small;
+     }
+ 
+     #section3 h2{
+         font-size: small;
+     }
+ 
+     #section3div{
+         font-size: x-small;
+     }
+ 
+     #testify{
+         width: 100px;
+     }
+ 
+     #testimonial img{
+         width: 50px;
+         height: 50px;
+     }
+     
+     footer div{
+         font-size: x-small;
+     }
+  }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>ATLANTA LOAN FIRM</h1>
+      <pre>
+           <i>Trusted And Reliable....</i>
+        </pre>
+        <div id="navbar">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">LOAN</a></li>
+            <li><a href="#section3div">TESTIMONIAL</a></li>
+            <li><a href="#footer">ABOUT</a></li>
+        </ul>
+        </div>
+      <hr />
+      <section id="section1">
+        <div id="section1_text">
+            <p>Get a loan at 2% interest without collateral.</p>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section id="section2">
+        <h2>LOAN CALCULATOR</h2>
+        <form method="post" enctype="multipart/form-data">
+          <div id="formdiv">
+            <table>
+              <tr>
+                <th class="inputp">
+                  <p>Amount($):</p>
+                </th>
+                <td class="inputd">
+                  <input type="number" placeholder="Amount" id="amount" />
+                </td>
+              </tr>
+              <tr>
+                <th class="inputp">
+                  <p>Duration:</p>
+                </th>
+                <td class="inputd">
+                  <input type="number" placeholder="Month" min="1" max="12" />
+                </td>
+              </tr>
+              <tr>
+                <th class="inputp">
+                  <p>Interest-rate:</p>
+                </th>
+                <td class="inputd">
+                  <p style="text-decoration: underline">2%</p>
+                </td>
+              </tr>
+              <tr>
+                <th class="inputp">Repayment:</th>
+                <td class="inputd">
+                  <p id="repayment" style="text-decoration: underline">5000</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <input type="submit" id="button" />
+        </form>
+      </section>
+
+      <section id="section3">
+        <center>
+          <h2>TESTIMONIAL</h2>
+        </center>
+        <div id="section3div">
+          <div id="testimonial">
+            <img src="./img/img1.jpg" />
+            <div id="testify">
+              <p>
+                I was given the sum of 12million dollars from ATLANTA LOAN FIRM
+                with the support of Mr. Marks Heiko. I thought i won't be given
+                the loan after a lot of bad experience with some people online.
+                I am happy to expand my rice production business with a partner
+                in Indonesia.
+              </p>
+            </div>
+          </div>
+          <div id="testimonial">
+            <img src="./img/img2.jpg" />
+            <div id="testify">
+              <p>
+                I am happy to meet a nice and trusted man like Mr Valerie who
+                assisted me to have the loan last month July 2022. I am fully
+                starting up my grocery business in full time. Thanks
+              </p>
+            </div>
+          </div>
+          <div id="testimonial">
+            <img src="./img/img3.jpeg" />
+            <div id="testify">
+              <p>
+                I am Mrs. Sharon from South Africa. I was doubting Mr. Valerie
+                Mally after he introduced me for the loan that worth sum of
+                4million dollar in 2020. Now, I am happy to have sum of 1.5m
+                dollars to expand my hotel business in Pretoria, South Africa.
+                Thanks
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+          <div>
+            <thead>
+              <h2>ABOUT</h2>
+            </thead>
+            <tbody>
+              <p>
+                Owned and managed by: Casafina Credit Limited a licensed credit
+                provider incorporated by the corporate affairs commission of Nigeria
+                and operating under money lending License granted by Lagos state
+                government.
+              </p>
+            </tbody>
+          </div>
+          <div>
+            <thead>
+              <h2>CONTACTS</h2>
+            </thead>
+            <tbody>
+              <p>info@easyloan.ng</p>
+              <p>0809 666 5661</p>
+            </tbody>
+          </div>
+          <div>
+            <thead>
+              <h2>OFFICE</h2>
+            </thead>
+            <tbody>
+              <p>1B Wing A Opebi/Oregun Link Bridge.</p>
+            </tbody>
+          </div>
+    </footer>
+  </body>
+</html>
