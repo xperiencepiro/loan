@@ -8,336 +8,334 @@
     <style>
       /*header*/
 
+      * {
+        margin: 0%;
+      }
 
-  * {
-    margin: 0%;
-  }
+      a {
+        text-decoration: none;
+        color: rgb(228, 96, 122);
+      }
 
-  a {
-    text-decoration: none;
-    color: rgb(228, 96, 122);
-  }
+      li {
+        list-style: none;
+      }
 
-  li {
-    list-style: none;
-  }
-
-  header {
-    background: linear-gradient(
-      to top,
-      rgb(216, 212, 212) 25%,
-      #c5cacc 50%
-    );
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    position: sticky;
-    top: 0%;
-    z-index: 1;
-  }
-
-  header h1 {
-    color: rgb(228, 96, 122);
-    font-size: 50px;
-    text-shadow: 2px 2px 2px #000;
-  }
-
-  #navbar {
-    background-color: #000;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-  }
-
-  header ul{
-    display: flex;
-  }
-
-  header ul li{
-    margin: 5px;
-  }
-
-  header ul li:hover {
-    background-color: #fff;
-    transition: 1s;
-  }
-
-  /*main*/
-
-  main {
-    position: relative;
-    width: 100%;
-  }
-
-  #section1 {
-    background: linear-gradient(
-      to top,
-      rgb(151, 135, 135) 44%,
-      rgb(217, 217, 235) 64%
-    );
-    height: 40px;
-    width: 100%;
-    text-shadow: 2px 2px 2px rgb(255, 254, 254);
-    overflow-x: hidden;
-    display: flex;
-  }
-
-  #section1_text{
-    width: 100%;
-    animation: advert_text 60s infinite 3s alternate;
-    transform: translateX(-37%);
-    display: flex;
-  }
-
-  #section1_text p {
-    color: #473d3d;
-  }
-
-  @keyframes advert_text {
-    from {
-      transform: translateX(-37%);
-    }
-
-    to {
-      transform: translateX(100%);
-    }
-  }
-
-  #section2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 400px;
-    justify-content: center;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #formdiv {
-    margin: 50px 0px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .inputp {
-    text-align: left;
-  }
-
-  .inputd {
-    text-align: right;
-  }
-
-  #section2 h2 {
-    text-decoration: underline;
-    color: rgb(228, 96, 122);
-  }
-
-  input {
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    text-align: right;
-    width: 100px;
-  }
-
-  input::placeholder {
-    text-align: right;
-  }
-
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input:focus {
-    outline: none;
-  }
-
-  input::placeholder {
-    color: rgb(228, 96, 122);
-  }
-
-  #button {
-    border: outset;
-    width: 100px;
-    height: 30px;
-    color: rgb(228, 96, 122);
-    margin: 30px 0px;
-    text-align: center;
-  }
-
-  #section3 h2 {
-    color: rgb(228, 96, 122);
-  }
-
-  #section3div {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-  #testimonial {
-    background-color: rgba(250, 235, 215, 0);
-    margin: 50px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 5px;
-    border-radius: 10px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-style: italic;
-  }
-
-  #testify {
-    height: 200px;
-    width: 200px;
-  }
-
-  #testimonial img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 50px;
-    clip-path: circle(50%);
-    z-index: -1;
-  }
-
-  footer {
-    background-color: rgb(8, 8, 8);
-    color: #fff;
-  }
-
-  footer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  footer div{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 200px;
-    margin: 10px;
-  }
-  
-  @media  (max-width: 375px), (max-width: 414px) {
-    header{
-       width: 100%;
-    }
-    header h1 {
-      font-size: xx-large;
-    }
-
-    #section2 h2{
-        font-size: medium;
-    }
-
-    #formdiv{
-        font-size: small;
-    }
-
-    #section3 h2{
-        font-size: medium;
-    }
-
-    #section3div{
-        font-size: small;
-    }
-
-    #testify{
-        width: 150px;
-    }
-
-    #testimonial img{
-        width: 70px;
-        height: 70px;
-    }
-    
-    footer div{
-        font-size: small;
-    }
-  }
-
-  @media  (min-width: 280px) {
-    header{
+      header {
+        background: linear-gradient(
+          to top,
+          rgb(216, 212, 212) 25%,
+          #c5cacc 50%
+        );
         width: 100%;
-     }
-     header h1 {
-       font-size: large;
-     }
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        position: sticky;
+        top: 0%;
+        z-index: 1;
+      }
 
-     header ul li{
-        font-size: x-small;
-     }
+      header h1 {
+        color: rgb(228, 96, 122);
+        font-size: 50px;
+        text-shadow: 2px 2px 2px #000;
+      }
 
-     #section1{
-        height: 20px;
-     }
+      #navbar {
+        background-color: #000;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
 
-     #section1_text p{
-        font-size: small;
-     }
- 
-     #section2 h2{
-         font-size: small;
-     }
- 
-     #formdiv{
-         font-size: x-small;
-     }
- 
-     #section3 h2{
-         font-size: small;
-     }
- 
-     #section3div{
-         font-size: x-small;
-     }
- 
-     #testify{
-         width: 100px;
-     }
- 
-     #testimonial img{
-         width: 50px;
-         height: 50px;
-     }
-     
-     footer div{
-         font-size: x-small;
-     }
-  }
+      header ul {
+        display: flex;
+      }
+
+      header ul li {
+        margin: 5px;
+      }
+
+      header ul li:hover {
+        background-color: #fff;
+        transition: 1s;
+      }
+
+      /*main*/
+
+      main {
+        position: relative;
+        width: 100%;
+      }
+
+      #section1 {
+        background: linear-gradient(
+          to top,
+          rgb(151, 135, 135) 44%,
+          rgb(217, 217, 235) 64%
+        );
+        height: 40px;
+        width: 100%;
+        text-shadow: 2px 2px 2px rgb(255, 254, 254);
+        overflow-x: hidden;
+        display: flex;
+      }
+
+      #section1_text {
+        width: 100%;
+        animation: advert_text 60s infinite 3s alternate;
+        transform: translateX(-37%);
+        display: flex;
+      }
+
+      #section1_text p {
+        color: #473d3d;
+      }
+
+      @keyframes advert_text {
+        from {
+          transform: translateX(-37%);
+        }
+
+        to {
+          transform: translateX(100%);
+        }
+      }
+
+      #section2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 400px;
+        justify-content: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #formdiv {
+        margin: 50px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .inputp {
+        text-align: left;
+      }
+
+      .inputd {
+        text-align: right;
+      }
+
+      #section2 h2 {
+        text-decoration: underline;
+        color: rgb(228, 96, 122);
+      }
+
+      input {
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        text-align: right;
+        width: 100px;
+      }
+
+      input::placeholder {
+        text-align: right;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        display: none;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      input::placeholder {
+        color: rgb(228, 96, 122);
+      }
+
+      #button {
+        border: outset;
+        width: 100px;
+        height: 30px;
+        color: rgb(228, 96, 122);
+        margin: 30px 0px;
+        text-align: center;
+      }
+
+      #section3 h2 {
+        color: rgb(228, 96, 122);
+      }
+
+      #section3div {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      #testimonial {
+        background-color: rgba(250, 235, 215, 0);
+        margin: 50px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px;
+        border-radius: 10px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-style: italic;
+      }
+
+      #testify {
+        height: 200px;
+        width: 200px;
+      }
+
+      #testimonial img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 50px;
+        clip-path: circle(50%);
+        z-index: -1;
+      }
+
+      footer {
+        background-color: rgb(8, 8, 8);
+        color: #fff;
+      }
+
+      footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      footer div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 200px;
+        margin: 10px;
+      }
+
+      @media (max-width: 375px), (max-width: 414px) {
+        header {
+          width: 100%;
+        }
+        header h1 {
+          font-size: xx-large;
+        }
+
+        #section2 h2 {
+          font-size: medium;
+        }
+
+        #formdiv {
+          font-size: small;
+        }
+
+        #section3 h2 {
+          font-size: medium;
+        }
+
+        #section3div {
+          font-size: small;
+        }
+
+        #testify {
+          width: 150px;
+        }
+
+        #testimonial img {
+          width: 70px;
+          height: 70px;
+        }
+
+        footer div {
+          font-size: small;
+        }
+      }
+
+      @media (min-width: 280px) {
+        header {
+          width: 100%;
+        }
+        header h1 {
+          font-size: large;
+        }
+
+        header ul li {
+          font-size: x-small;
+        }
+
+        #section1 {
+          height: 20px;
+        }
+
+        #section1_text p {
+          font-size: small;
+        }
+
+        #section2 h2 {
+          font-size: small;
+        }
+
+        #formdiv {
+          font-size: x-small;
+        }
+
+        #section3 h2 {
+          font-size: small;
+        }
+
+        #section3div {
+          font-size: x-small;
+        }
+
+        #testify {
+          width: 100px;
+        }
+
+        #testimonial img {
+          width: 50px;
+          height: 50px;
+        }
+
+        footer div {
+          font-size: x-small;
+        }
+      }
     </style>
   </head>
-  <body>
+  <body oninput="calc()">
     <header>
       <h1>ATLANTA LOAN FIRM</h1>
       <pre>
            <i>Trusted And Reliable....</i>
         </pre>
-        <div id="navbar">
-          <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">LOAN</a></li>
-            <li><a href="#section3div">TESTIMONIAL</a></li>
-            <li><a href="#footer">ABOUT</a></li>
+      <div id="navbar">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">LOAN</a></li>
+          <li><a href="#section3div">TESTIMONIAL</a></li>
+          <li><a href="#footer">ABOUT</a></li>
         </ul>
-        </div>
+      </div>
       <hr />
       <section id="section1">
         <div id="section1_text">
-            <p>Get a loan at 2% interest without collateral.</p>
+          <p>Get a loan at 2% interest without collateral.</p>
         </div>
       </section>
     </header>
@@ -360,7 +358,13 @@
                   <p>Duration:</p>
                 </th>
                 <td class="inputd">
-                  <input type="number" placeholder="Month" min="1" max="12" />
+                  <input
+                    type="number"
+                    placeholder="Month"
+                    min="1"
+                    max="12"
+                    id="month"
+                  />
                 </td>
               </tr>
               <tr>
@@ -368,18 +372,54 @@
                   <p>Interest-rate:</p>
                 </th>
                 <td class="inputd">
-                  <p style="text-decoration: underline">2%</p>
+                  <p id="interest" style="text-decoration: underline">2%</p>
                 </td>
               </tr>
               <tr>
                 <th class="inputp">Repayment:</th>
                 <td class="inputd">
-                  <p id="repayment" style="text-decoration: underline">5000</p>
+                  <p id="repayment" style="text-decoration: underline"></p>
                 </td>
               </tr>
             </table>
+            <script>
+              function calc() {
+                var loan_amount = document.getElementById("amount");
+                var loan_duration = document.getElementById("month");
+                var loan_interest = document.getElementById("interest");
+                var loan_Repayment = document.getElementById("repayment");
+                var errormsg = document.getElementById("errormsg");
+
+                if (loan_amount.value <= 999) {
+                  errormsg.innerText = "Minimun loan amount is $1000";
+                } else {
+                  errormsg.innerText = "";
+                  if (loan_duration.value < 1 || loan_duration.value > 12) {
+                    errormsg.innerText = "Enter duration per month";
+                  } else {
+                    var new_loan_interest = loan_amount.value / 100 * 2;
+                    loan_interest.innerText = new_loan_interest * loan_duration.value;
+                    loan_Repayment.innerText = parseInt(loan_interest.innerText) + parseInt(loan_amount.value);
+                    
+                  }
+                }
+              }
+
+              /*function apply() {
+                var loan_amount = document.getElementById("amount");
+                var loan_duration = document.getElementById("month");
+                var apply = document.getElementById("apply");
+
+                if ((loan_amount.value < 1000) || (loan_duration.value.length < 1)) {
+                  
+                } else {
+                  
+                }
+              }*/
+            </script>
           </div>
-          <input type="submit" id="button" />
+          <p id="errormsg" style="color: red"></p>
+          <input type="submit" id="button" value="APPLY" onclick="apply()" />
         </form>
       </section>
 
@@ -426,36 +466,36 @@
       </section>
     </main>
     <footer>
-          <div>
-            <thead>
-              <h2>ABOUT</h2>
-            </thead>
-            <tbody>
-              <p>
-                Owned and managed by: Casafina Credit Limited a licensed credit
-                provider incorporated by the corporate affairs commission of Nigeria
-                and operating under money lending License granted by Lagos state
-                government.
-              </p>
-            </tbody>
-          </div>
-          <div>
-            <thead>
-              <h2>CONTACTS</h2>
-            </thead>
-            <tbody>
-              <p>info@easyloan.ng</p>
-              <p>0809 666 5661</p>
-            </tbody>
-          </div>
-          <div>
-            <thead>
-              <h2>OFFICE</h2>
-            </thead>
-            <tbody>
-              <p>1B Wing A Opebi/Oregun Link Bridge.</p>
-            </tbody>
-          </div>
+      <div>
+        <thead>
+          <h2>ABOUT</h2>
+        </thead>
+        <tbody>
+          <p>
+            Owned and managed by: Casafina Credit Limited a licensed credit
+            provider incorporated by the corporate affairs commission of Nigeria
+            and operating under money lending License granted by Lagos state
+            government.
+          </p>
+        </tbody>
+      </div>
+      <div>
+        <thead>
+          <h2>CONTACTS</h2>
+        </thead>
+        <tbody>
+          <p>info@easyloan.ng</p>
+          <p>0809 666 5661</p>
+        </tbody>
+      </div>
+      <div>
+        <thead>
+          <h2>OFFICE</h2>
+        </thead>
+        <tbody>
+          <p>1B Wing A Opebi/Oregun Link Bridge.</p>
+        </tbody>
+      </div>
     </footer>
   </body>
 </html>
