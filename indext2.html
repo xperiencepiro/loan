@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINANCIAL GROUPS | LOAN</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        /* border width and color */
+
+        section{
+            border: 3px #738573 outset;
+        }
+        /* Header */
+
+        #primary_header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background:linear-gradient(to top, #aaaeaa, 40%, rgb(154, 160, 144) 60%);
+            border: 3px #738573 outset;
+            padding: 30px 0px;
+            margin: 0%;
+        }
+
+        #header_title{
+            text-align: center;
+        }
+
+        /* Title */
+
+        #header_title h1{
+            font-size: xx-large;
+            text-shadow: 2px 2px 2px #000;
+            color: rgb(207, 189, 86);
+        }
+
+        #header_contact{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            position: absolute;
+            top: 1%;
+            left: 1%;
+        }
+
+        #header_contact p{
+            margin-top: 3px;
+        }
+
+        /* Navbar */
+
+        nav{
+            margin-top: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar li{
+            list-style: none;
+            padding: 2px 5px;
+            font-size: large;
+        }
+
+        .navbar li a:hover{
+            color:  rgb(207, 189, 86);
+            transition: 1s;
+            border-radius: 50px;
+        }
+
+        .navbar{
+            display: flex;
+            text-align: center;
+        }
+
+        .navbar li a{
+            text-decoration: none;
+        }
+
+        /* Advert */
+
+        .advert{
+            overflow-x: hidden;
+        }
+
+        .advert_text{
+            display: flex;
+            flex-direction: row;
+            transform: translateX(-100%);
+            animation: advert_text 60s infinite 2s;
+            height: 20px;
+        }
+
+        .advert_text p{
+            border-radius: 30px;
+            color: #000;
+            margin: 0% auto;
+            white-space: nowrap;
+            margin: 0px 50px;
+        }
+
+        @keyframes advert_text{
+            from{
+                transform: translateX(-100%);
+            }
+
+            to{
+                transform: translateX(100%);
+            }
+        }
+
+        /* Calculator */
+
+        #loan_calculator{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 50px;
+            align-items: center;
+            line-height: 40px;
+        }
+
+        #loan_calculator h2{
+            color: rgb(207, 189, 86);
+        }
+
+        #calculate{
+            display: flex;
+            justify-content: center;
+            margin: 100px 0px;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .calc{
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+
+        #result_heading{
+            background-color: blue;
+            width: 200px;
+            text-align: left;
+            padding-left: 10px;
+            color: #fff;
+
+        }
+
+        .calc:nth-last-child(2){
+            background-color: rgb(211, 211, 195);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        #amount, #duration{
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+            outline: none;
+        }
+
+        #amount::-webkit-outer-spin-button, #duration::-webkit-outer-spin-button,
+        #amount::-webkit-inner-spin-button, #duration::-webkit-inner-spin-button{
+            display: none;
+        }
+
+        #errormsg{
+            margin-bottom: 50px;
+            color: red;
+        }
+
+        /* TESTIMONIAL */
+
+        #testimonial{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            background-color: rgb(93, 93, 158);
+        }
+
+        .testify{
+            display: flex;
+            flex-direction: row;
+            margin: 30px auto;
+        }
+
+    </style>
+</head>
+<body >
+    <header>
+        <section id="primary_header">
+            <div id="header_contact">
+                &phone;&nbsp;<p>Call: 555 323 989</p>
+            </div>
+            <div id="header_title">
+                <h1>FINANCIAL GROUPS</h1>
+                <PRE><i>Trusted And Reliable....</i></PRE>
+            </div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">LOAN</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <!-- Advert -->
+
+        
+        <section class="advert">
+            <div class="advert_text">
+                <p>Get a loan at 2% interest rate..</p>
+                <p>We are one of the fastest lending company in the world.</p>
+            </div>
+            <div id="loan_calculator">
+                <h2>
+                    LOAN CALCULATOR
+                </h2>
+                <div id="calculate">
+                    <div class="calc">
+
+                        <!-- Amount input -->
+
+                        <label for="amount" >Amount:</label>
+                        <input type="number" name="amount" id="amount" oninput="calc()" placeholder="Amount">
+                        <label for="compound">Pay Back:</label>
+                        <select name="compound" id="compound">
+                            <option value="Monthly" >Monthly</option>
+                        </select>
+                        
+
+                        <!-- Month input -->
+
+
+                        <label for="duration">Loan Term:</label>
+                        <script>
+                            function duration() {
+                                var duration = document.getElementById('duration');
+                                var compound = document.getElementById('compound');
+                                var errormsg = document.getElementById('errormsg');
+
+                                if (duration.value > 60) {
+                                    errormsg.innerText = 'Maximun loan term is 5 years!'
+                                    duration.style.borderBottomColor = 'red';
+                                } else {
+                                    errormsg.innerText = ' '
+                                    duration.style.borderBottomColor = 'green';
+                                    result();
+                                }
+                                
+                            }
+                        </script>
+                        <input type="number" min="1" max="60" name="duration" id="duration" oninput="duration()" placeholder="Monthly">
+                        <label for="interest_rate">Interest Rate:</label>
+                        <p id="interest_rate">2</p>
+                    </div>
+                    <script>
+                        function compound() {
+                            var compound = document.getElementById('compound');
+                            var payback = document.getElementById('payback');
+                            var duration = document.getElementById('duration');
+                            payback.innerText = compound.value;
+                            duration.setAttribute('placeholder', compound.value);
+                        }
+                    </script>
+                    <div class="calc">
+                        <div id="result_heading">
+                            <h1>RESULT</h1>
+                        </div>
+                        <p id="payback">Every Month</p>
+                        <p id="payback_amount">$5000</p>
+                        <label for="total_interest_rate">Interest Rate</label>
+                        <p id="total_interest_rate">$2000</p>
+                        <label for="total_payment">Repayment</label>
+                        <p id="total_payment">$7000</p>
+                    </div>
+                    <SCRIPT>
+                        function result(){
+                            var amount = document.getElementById('amount').value;
+                            var duration = document.getElementById('duration').value;
+                            var monthlyPayment = document.getElementById('payback_amount');
+                            var totalInterestRate = document.getElementById('total_interest_rate').innerText;
+                            var totalPayment = document.getElementById('total_payment').innerText;
+                            var interestRate = document.getElementById('interest_rate').innerText;
+
+                           
+                            let newMonthlyPayment = (amount/100)*2;
+                            let newAmount = parseInt(newMonthlyPayment) + parseInt(amount);
+                            monthlyPayment.innerText = '$' + newAmount/duration;
+
+                        }
+                    </SCRIPT>
+                </div>
+                <p id="errormsg"></p>
+                <script>
+                    function calc() {
+                        var amount = document.getElementById('amount');
+                        var errormsg = document.getElementById('errormsg');
+
+                        if (amount.value < 1000) {
+                            amount.style.borderBottomColor = 'red';
+                            errormsg.innerText = "Minimum loan amout is $1000";
+                        }else{
+                            amount.style.borderBottomColor = 'green';
+                            errormsg.innerText = '';
+                        }
+                        
+                    }
+                </script>
+            </div>
+        </section>
+        <section id="testimonial">
+            <h1>TESTIMONIAL</h1>
+            <div>
+                <div class="testify">
+                    <img src="" alt="Photo">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt recusandae in modi quae, odio dolore!</p>
+                </div>
+                <div class="testify">
+                    <img src="" alt="Photo">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus officiis quibusdam pariatur.</p>
+                </div>
+                <div class="testify">
+                    <div>
+                        <img src="" alt="Photo">
+                        <p>Name</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum tempora sit, dicta ea alias aliquid ratione tenetur! Quae incidunt animi eligendi quasi pariatur ex officiis?</p>
+                </div>
+            </div>
+        </section>
+        <article></article>
+        <aside></aside>
+    </main>
+    <footer></footer>
+</body>
+</html>
