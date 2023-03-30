@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINANCIAL GROUPS | LOAN</title>
+    <meta name="description" content="The fsatest and cheapest loan interest rate firm in USA">
+    <title>ATLANTA FINANCIAL GROUP | LOAN</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -135,7 +136,7 @@
         #calculate{
             display: flex;
             justify-content: center;
-            margin: 100px 0px;
+            margin: 50px 0px;
             max-width: 1200px;
             flex-wrap: wrap;
         }
@@ -144,11 +145,15 @@
             display: flex;
             flex-direction: column;
             margin: 20px 80px;
+            width: 250px;
+            padding: 20px;
+            background-color: rgb(161, 161, 133);
+            border-radius: 5px;
         }
 
         #result_heading{
             background-color: blue;
-            width: 200px;
+            width: 100%;
             text-align: left;
             padding-left: 10px;
             color: #fff;
@@ -159,6 +164,7 @@
             background-color: rgb(211, 211, 195);
             border-radius: 4px;
             overflow: hidden;
+            padding: 0;
         }
 
         #amount, #duration{
@@ -166,6 +172,14 @@
             border-right: 0;
             border-left: 0;
             outline: none;
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #amount::placeholder, #duration::placeholder{
+            padding: 10px;
         }
 
         #amount::-webkit-outer-spin-button, #duration::-webkit-outer-spin-button,
@@ -181,29 +195,66 @@
         /* TESTIMONIAL */
 
         #testimonial{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             padding: 50px 20px;
             background-color: rgb(93, 93, 158);
+            text-align: center;
+            justify-content: space-between;
+            box-sizing: border-box;
         }
 
         .testify{
+            display: inline-block;
+            margin-bottom: 10px;
+            width: 33.3%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-radius: 3px;
+        }
+
+        .testify_img{
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+            clip-path: circle();
+            padding: 5px;
+        }
+
+        #ftsection{
+            background-color: #000;
+            color: #fff;
+            font-size: small;
             display: flex;
-            flex-direction: row;
-            margin: 30px auto;
+            align-items: center;
+            text-align: center;
+            justify-content: space-between;
+            padding: 20px auto;
+        }
+
+        .footerdiv{
+            display: inline-block;
+            margin-bottom: 10px;
+            max-width: 200px;
+            padding: 10px;
+            border-radius: 3px;
+        }
+
+        
+
+        span{
+            color:  rgb(207, 189, 86);
         }
 
     </style>
 </head>
-<body >
+<body>
     <header>
         <section id="primary_header">
             <div id="header_contact">
-                &phone;&nbsp;<p>Call: 555 323 989</p>
+                &phone;&nbsp;<p>Call: (+1) 555 323 989</p>
             </div>
             <div id="header_title">
-                <h1>FINANCIAL GROUPS</h1>
+                <h1>ATLANTA FINANCIAL GROUP</h1>
                 <PRE><i>Trusted And Reliable....</i></PRE>
             </div>
             <nav>
@@ -236,7 +287,7 @@
                         <!-- Amount input -->
 
                         <label for="amount" >Amount:</label>
-                        <input type="number" name="amount" id="amount" oninput="calc()" placeholder="Amount">
+                        <input type="number" name="amount" id="amount" placeholder="Amount" oninput="amount()">
                         <label for="compound">Pay Back:</label>
                         <select name="compound" id="compound">
                             <option value="Monthly" >Monthly</option>
@@ -247,96 +298,213 @@
 
 
                         <label for="duration">Loan Term:</label>
-                        <script>
-                            function duration() {
-                                var duration = document.getElementById('duration');
-                                var compound = document.getElementById('compound');
-                                var errormsg = document.getElementById('errormsg');
-
-                                if (duration.value > 60) {
-                                    errormsg.innerText = 'Maximun loan term is 5 years!'
-                                    duration.style.borderBottomColor = 'red';
-                                } else {
-                                    errormsg.innerText = ' '
-                                    duration.style.borderBottomColor = 'green';
-                                    result();
-                                }
-                                
-                            }
-                        </script>
-                        <input type="number" min="1" max="60" name="duration" id="duration" oninput="duration()" placeholder="Monthly">
+                        <input type="number" min="1" max="60" name="duration" id="duration" oninput="term()" placeholder="Monthly">
                         <label for="interest_rate">Interest Rate:</label>
                         <p id="interest_rate">2</p>
                     </div>
-                    <script>
-                        function compound() {
-                            var compound = document.getElementById('compound');
-                            var payback = document.getElementById('payback');
-                            var duration = document.getElementById('duration');
-                            payback.innerText = compound.value;
-                            duration.setAttribute('placeholder', compound.value);
-                        }
-                    </script>
                     <div class="calc">
                         <div id="result_heading">
                             <h1>RESULT</h1>
                         </div>
                         <p id="payback">Every Month</p>
-                        <p id="payback_amount">$5000</p>
+                        <p id="payback_amount">$0</p>
                         <label for="total_interest_rate">Interest Rate</label>
-                        <p id="total_interest_rate">$2000</p>
+                        <p id="total_interest_rate">$0</p>
                         <label for="total_payment">Repayment</label>
-                        <p id="total_payment">$7000</p>
+                        <p id="total_payment">$0</p>
                     </div>
                     <SCRIPT>
+                        function term(){
+                            var amount = document.getElementById('amount');
+                            var amountValue = amount.value;
+                            var errorMsg = document.getElementById('errormsg');
+                            var duration = document.getElementById('duration');
+                            var durationValue = duration.value;
+
+                            // if(durationValue.length > 0){
+                            //     duration.style.borderBottomColor = 'green';
+                            //     if((amountValue <= 5000) && (durationValue < 6) || (amountValue > 5000) && (durationValue > 6)){
+                            //         duration.style.borderBottomColor = 'green';
+                            //         errorMsg.innerText = '';
+                            //     }else{
+                            //         duration.style.borderBottomColor = 'red';
+                            //         errorMsg.innerText = 'Loan amount below $10000 cannot exceed 1 year';
+                            //     }
+                                // {
+                                //     duration.style.borderBottomColor = 'red';
+                                //     errorMsg.innerText = 'Loan amount below $5000 cannot exceed 5 months';
+                                // }
+                            // }else 
+
+
+                            while ((amountValue >= 1000) && (amountValue < 10000)) {
+                                switch (durationValue.length) {
+                                case 1:
+                                     duration.style.borderBottomColor = 'green';
+                                     errorMsg.innerText = '';
+                                    break;
+                            
+                                default:
+                                    errorMsg.innerText = 'Loan amount below $10000 cannot exceed 9 months';
+                                    duration.style.borderBottomColor = 'red';
+                                    break;
+                            }
+
+                            break;
+                            }
+
+                            
+                        }
+                        function amount(){
+                            var amount = document.getElementById('amount');
+                            var amountValue = amount.value;
+                            var errorMsg = document.getElementById('errormsg');
+                            var duration = document.getElementById('duration');
+                            var durationValue = duration.value;
+
+                            if ((amountValue.length >= 3) && (amountValue < 1000)) {
+                                errorMsg.innerText = 'Loan Amount Must Be $1000 And Above';
+                                amount.style.borderBottomColor = 'red';
+                            }else if((amountValue.length > 3) && (amountValue >= 1000)) {
+                                amount.style.borderBottomColor = 'green';
+                                errorMsg.innerText = '';
+                            }
+
+                            
+                            // else if(durationValue.length > 1){
+                                    
+                            //         
+                            //     // }else{
+                                //     duration.style.borderBottomColor = 'red';
+                                //     errorMsg.innerText = 'Loan amount below $5000 cannot exceed 5 months';
+                            // }
+                        }
+
+                        //     duration.style.borderBottomColor = 'green';
+                                    //     errorMsg.innerText = '';
+                                    // }else{
                         function result(){
-                            var amount = document.getElementById('amount').value;
-                            var duration = document.getElementById('duration').value;
+                            
+                            
                             var monthlyPayment = document.getElementById('payback_amount');
-                            var totalInterestRate = document.getElementById('total_interest_rate').innerText;
-                            var totalPayment = document.getElementById('total_payment').innerText;
+                            var totalInterestRate = document.getElementById("total_interest_rate");
+                            var totalPayment = document.getElementById('total_payment');
                             var interestRate = document.getElementById('interest_rate').innerText;
+                            var errorMsg = document.getElementById('errormsg').innerText;
+                            var compound = document.getElementById('compound').value;
+                            
 
+                            payback.innerText = compound;
+                            duration.setAttribute('placeholder', compound);
+                            
+
+                            if(durationValue.length < 1){
+                                errorMsg.innerText = 'Enter Loan Term Per Month';
+                            }
+                        
+                            // if (() & (duration.length < 1)) {
+                                
+                            // }
+                                // 
+                                // duration.style.borderBottomColor = 'red';
+                            // }else if (duration == '') {
+                            //     errorMsg = 'Enter loan term per month';
+                            // }else{
+                            //     errorMsg = '';
+                            // }
                            
-                            let newMonthlyPayment = (amount/100)*2;
-                            let newAmount = parseInt(newMonthlyPayment) + parseInt(amount);
-                            monthlyPayment.innerText = '$' + newAmount/duration;
+                            // if ((amount < 5000) && (duration.value > 5)) {
+                            //     duration.style.borderBottomColor = 'red';
+                            //     
+                            //     monthlyPayment.innerText = '$0';
+                            //     totalInterestRate.innerText = '$0';
+                            //     totalPayment.innerText = '$0';
+                            // }else if (amount == '') {
+                            //     errorMsg.innerText = 'Enter loan amount.';
+                            // }
 
+
+                            // if (duration.value > 60) {
+                            //         errormsg.innerText = 'Maximun loan term is 5 years!'
+                            //         duration.style.borderBottomColor = 'red';
+                            //     } else if(duration.value < 1){
+                            //         errormsg.innerText = 'Enter loan term'
+                            //         duration.style.borderBottomColor = 'red';
+                            //     }else{
+                            //         errormsg.innerText = ' ';
+                            //         duration.style.borderBottomColor = 'green';
+                            //         result();
+                            //     }
+                        //     if (amount.value < 1000) {
+                        //     amount.style.borderBottomColor = 'red';
+                        //     errormsg.innerText = "Minimum loan amout is $1000";
+                        // }else{
+                        //     amount.style.borderBottomColor = 'green';
+                        //     errormsg.innerText = '';
+                        // }
+
+                            // } else {
+                            //     let newMonthlyPayment = (amount/100)*2;
+                            //     let newAmount = parseInt(newMonthlyPayment) + parseInt(amount);
+                            //     monthlyPayment.innerText = '$' + newAmount/duration.value;
+                            //     totalInterestRate.innerText = '$' + newMonthlyPayment;
+                            //     totalPayment.innerText = duration.value + 'M / $' + newAmount;
+                            // }
+
+                            // if ((amount < 10000) & (duration.value > 12) ) {
+                            //     duration.style.borderBottomColor = 'red';
+                            //     errorMsg.innerText = 'Loan amount below $10000 cannot exceed 1 year';
+                            //     monthlyPayment.innerText = '$0';
+                            //     totalInterestRate.innerText = '$0';
+                            //     totalPayment.innerText = '$0';
+
+                            // } else {
+                            //     let newMonthlyPayment = (amount/100)*2;
+                            //     let newAmount = parseInt(newMonthlyPayment) + parseInt(amount);
+                            //     monthlyPayment.innerText = '$' + newAmount/duration.value;
+                            //     totalInterestRate.innerText = '$' + newMonthlyPayment;
+                            //     totalPayment.innerText = duration.value + 'M / $' + newAmount;
+                            // }
+
+                            // if (duration.value > 12) {
+                            //     duration.style.borderBottomColor = 'red';
+                            //     errorMsg.innerText = 'Loan amount below $10000 cannot exceed 1 year';
+                            //     monthlyPayment.innerText = '$0';
+                            //     totalInterestRate.innerText = '$0';
+                            //     totalPayment.innerText = '$0';
+
+                            // } else {
+                            //     let newMonthlyPayment = (amount/100)*2;
+                            //     let newAmount = parseInt(newMonthlyPayment) + parseInt(amount);
+                            //     monthlyPayment.innerText = '$' + newAmount/duration.value;
+                            //     totalInterestRate.innerText = '$' + newMonthlyPayment;
+                            //     totalPayment.innerText = duration.value + 'M / $' + newAmount;
+                            // }
                         }
                     </SCRIPT>
                 </div>
-                <p id="errormsg"></p>
-                <script>
-                    function calc() {
-                        var amount = document.getElementById('amount');
-                        var errormsg = document.getElementById('errormsg');
-
-                        if (amount.value < 1000) {
-                            amount.style.borderBottomColor = 'red';
-                            errormsg.innerText = "Minimum loan amout is $1000";
-                        }else{
-                            amount.style.borderBottomColor = 'green';
-                            errormsg.innerText = '';
-                        }
-                        
-                    }
-                </script>
             </div>
         </section>
         <section id="testimonial">
             <h1>TESTIMONIAL</h1>
             <div>
                 <div class="testify">
-                    <img src="" alt="Photo">
+                    <div class="testify_img">
+                        <img src="./img/img1.jpg" alt="Photo" width="100%" height="100%">
+                        <p>Name</p>
+                    </div>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt recusandae in modi quae, odio dolore!</p>
                 </div>
                 <div class="testify">
-                    <img src="" alt="Photo">
+                    <div class="testify_img">
+                        <img src="./img/img2.jpg" alt="Photo" width="100%" height="100%">
+                        <p>Name</p>
+                    </div>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus officiis quibusdam pariatur.</p>
                 </div>
                 <div class="testify">
-                    <div>
-                        <img src="" alt="Photo">
+                    <div class="testify_img">
+                        <img src="./img/img3.jpeg" alt="Photo" width="100%" height="100%">
                         <p>Name</p>
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum tempora sit, dicta ea alias aliquid ratione tenetur! Quae incidunt animi eligendi quasi pariatur ex officiis?</p>
@@ -346,6 +514,25 @@
         <article></article>
         <aside></aside>
     </main>
-    <footer></footer>
+    <footer>
+        <section id="ftsection">
+            <div class="footerdiv">
+                <h2>ABOUT</h2>
+                <p><span>ATLANTA FINANCIAL GROUP</span> is the fastest and cheapest loan firm in USA </p>
+            </div>
+            <div class="footerdiv">
+                <h2>OFFICE</h2>
+                <p>1BH Wing A Portland/Oregon</p>
+            </div>
+            <div class="footerdiv">
+                <h2>CONTACTS</h2>
+                <label for="email">Email:</label>
+                <p id="email"> oliverwillions3302@gmail.com</p>
+                <label for="phone">Phone:</label>
+                <p id="phone">&phone; (+1) 555 323 989</p>
+            </div>
+        </section>
+        <p>Copyright &copy;2023. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
