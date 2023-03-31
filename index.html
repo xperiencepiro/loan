@@ -376,7 +376,7 @@
                   let newAmount = parseInt(newMonthlyPayment) + parseInt(amountValue);
                   monthlyPayment.innerText = "$" + newAmount / durationValue;
                   totalInterestRate.innerText = "$" + newMonthlyPayment;
-                  totalPayment.innerText = durationValue + " m/$ " + newAmount;
+                  totalPayment.innerText = durationValue + "m / $" + newAmount;
 
                   if (durationValue >= 1) {
                     duration.style.borderBottomColor = "green";
@@ -384,7 +384,7 @@
                     let newAmount = parseInt(newMonthlyPayment) + parseInt(amountValue);
                     monthlyPayment.innerText = "$" + newAmount / durationValue;
                     totalInterestRate.innerText = "$" + newMonthlyPayment;
-                    totalPayment.innerText = durationValue + " m/$ " + newAmount;
+                    totalPayment.innerText = durationValue + "m / $" + newAmount;
                   } else {
                     duration.style.borderBottomColor = "red";
                     errorMsg.innerText = "Enter Loan Term";
@@ -454,7 +454,7 @@
                     let newAmount = parseInt(newMonthlyPayment) + parseInt(amountValue);
                     monthlyPayment.innerText = "$" + newAmount / durationValue;
                     totalInterestRate.innerText = "$" + newMonthlyPayment;
-                    totalPayment.innerText = durationValue + " m/$ " + newAmount;
+                    totalPayment.innerText = durationValue + "m / $" + newAmount;
                   }
                 } else {
                   duration.style.borderBottomColor = "red";
