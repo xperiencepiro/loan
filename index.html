@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="The fsatest and cheapest loan interest rate firm in USA"
+      content="The fastest and cheapest loan firm in USA"
     />
     <title>ATLANTA FINANCIAL GROUP | LOAN</title>
 
@@ -72,20 +72,20 @@
       /* Navbar */
 
       nav {
-        margin-top: 20px;
+        margin-top: 1rem;
         font-family: "Roboto", sans-serif;
       }
 
       .navbar li {
         list-style: none;
-        padding: 2px 5px;
+        padding: 0.1rem 0.2rem;
         font-size: large;
       }
 
       .navbar li a:hover {
         color: rgb(207, 189, 86);
         transition: 1s;
-        border-radius: 50px;
+        border-radius: 3.1rem;
       }
 
       .navbar {
@@ -107,7 +107,7 @@
         display: flex;
         flex-direction: row;
         transform: translateX(-100%);
-        animation: advert_text 60s infinite 2s;
+        animation: advert_text 100s infinite 1s;
         height: 20px;
       }
 
@@ -116,7 +116,7 @@
         color: #000;
         margin: 0% auto;
         white-space: nowrap;
-        margin: 0px 50px;
+        margin: 0px 3.1rem;
       }
 
       @keyframes advert_text {
@@ -132,12 +132,9 @@
       /* Calculator */
 
       #loan_calculator {
-        display: flex;
-        flex-direction: column;
         text-align: center;
-        margin-top: 50px;
-        align-items: center;
-        line-height: 40px;
+        margin: 3.1rem 1rem;
+        line-height: 2.5rem;
       }
 
       #loan_calculator h2 {
@@ -145,18 +142,14 @@
       }
 
       #calculate {
-        display: flex;
-        justify-content: center;
-        margin: 50px 0px;
-        max-width: 1200px;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: auto;
       }
 
       .calc {
         display: flex;
         flex-direction: column;
-        margin: 20px 80px;
-        width: 250px;
+        margin: 1.25rem 5rem;
         padding: 20px;
         background-color: rgb(189, 189, 174);
         border-radius: 5px;
@@ -165,16 +158,14 @@
 
       #result_heading {
         background-color: blue;
-        width: 100%;
-        text-align: left;
-        padding-left: 10px;
+        text-align: center;
+        padding-left: 0.6rem;
         color: #fff;
       }
 
       .calc:nth-last-child(2) {
         background-color: rgb(211, 211, 195);
         border-radius: 4px;
-        overflow: hidden;
         padding: 0;
       }
 
@@ -186,14 +177,14 @@
         border-left: 0;
         outline: none;
         width: 100%;
-        height: 40px;
+        height: 2.5rem;
         border-radius: 5px;
         text-align: center;
       }
 
       #amount::placeholder,
       #duration::placeholder {
-        padding: 10px;
+        padding: 0.6rem;
       }
 
       #amount::-webkit-outer-spin-button,
@@ -204,67 +195,111 @@
       }
 
       #errormsg {
-        margin: 40px 0px;
+        margin: 2.5rem 0px;
+      }
+
+      #total_payment{
+        margin-bottom: 1rem;
+      }
+
+      .btn{
+        color: #000;
+        background-color: rgb(131, 131, 173);
+        padding: 20px;
+        border-radius: 50px;
+        display: block;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn:hover{
+        background-color: #ffffff93;
+        opacity: 1;
+        border: 1px #000;
+        box-shadow: 2px 2px 2px #000;
       }
 
       /* TESTIMONIAL */
 
-      .testimonial {
-        padding-top: 100px;
-        background-color: lightblue;
+      #testimonial {
+        padding-top: 6.25rem;
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 0px 40px;
+        padding: 0px 2.5rem;
       }
 
-      .testimonial h1 {
+      #testimonial h1 {
         color: #fff;
         text-align: center;
-        padding-bottom: 40px;
-        padding-top: 30px;
+        padding-bottom: 2.5rem;
+        padding-top: 1.9rem;
       }
 
       .testify {
         background-color: #f4f4f4;
         padding: 20px;
-        margin-bottom: 40px;
+        margin-bottom: 2.5rem;
         border-radius: 5px;
         opacity: 0.9;
         box-sizing: border-box;
         max-width: 800px;
       }
 
-      .testimonial .testify img {
-        width: 100px;
-        height: 100px;
+      #testimonial .testify img {
+        width: 6.25rem;
+        height: 6.25rem;
         float: left;
         margin-right: 20px;
         border-radius: 50%;
       }
 
-     .testify:nth-child(3) {
+      .testify:nth-child(3) {
         background-color: #d4d4d4;
       }
 
-      .foots {
+      #foots {
         background-color: #000;
         color: #fff;
         font-size: small;
-        padding: 40px 10px;
+        padding: 2.5rem 0.6rem;
         display: flex;
         text-align: center;
         justify-content: center;
         flex-wrap: wrap;
       }
 
+      #foots a{
+        color: #fff;
+      }
+
       .foot {
-        margin: 10px;
+        margin: 0.6rem;
         max-width: 300px;
       }
 
       span {
         color: rgb(207, 189, 86);
+      }
+
+      @media (min-width: 768px) {
+        #result_show {
+          margin-top: 3.75rem;
+        }
+      }
+      @media (max-width: 768px) {
+        #result_show {
+          margin: 3.75rem;
+        }
+      }
+      @media (max-width: 500px) {
+        .calc{
+          margin: 1rem;
+          display: grid;
+          grid-template-rows: auto auto;
+        }
       }
     </style>
   </head>
@@ -273,7 +308,7 @@
       <section id="primary_header">
         <div id="header_contact">
           &phone;&nbsp;
-          <p>Call: +1 (475) 307-8430</p>
+          <p>Call: +1 (682) 246-3440</p>
         </div>
         <div id="header_title">
           <h1>ATLANTA FINANCIAL GROUP</h1>
@@ -281,10 +316,10 @@
         </div>
         <nav>
           <ul class="navbar">
-            <li><a href="">HOME</a></li>
-            <li><a href="">LOAN</a></li>
-            <li><a href="">ABOUT</a></li>
-            <li><a href="">CONTACT</a></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#loan_calculator">LOAN</a></li>
+            <li><a href="#testimonial">TESTIMONIAL</a></li>
+            <li><a href="#foots">ABOUT</a></li>
           </ul>
         </nav>
       </section>
@@ -295,7 +330,10 @@
       <section class="advert">
         <div class="advert_text">
           <p>Get a loan at 2% interest rate..</p>
-          <p>We are one of the fastest lending company in the world.</p>
+          <p>We are one of the fastest lending company in the world</p>
+          <p>Need cash fast? Get approved for a loan in minutes with our hassle-free application process!</p>
+          <p>Whether you need to cover unexpected expenses or consolidate debt, our loan options have got you covered.</p>
+          <p>Our flexible repayment plans make it easy to fit your loan payments into your budget, so you can focus on living your life.</p>
         </div>
         <div id="loan_calculator">
           <h2>LOAN CALCULATOR</h2>
@@ -316,7 +354,7 @@
               <label for="compound">Pay Back:</label>
               <select name="compound" id="compound">
                 <option value="Monthly">Monthly</option>
-<!--                 <option value="Yearly">Yearly</option> -->
+                <option value="Yearly">Yearly</option>
               </select>
 
               <!-- Month input -->
@@ -340,12 +378,16 @@
               <div id="result_heading">
                 <h1>RESULT</h1>
               </div>
-              <p id="payback">Monthly</p>
-              <p id="payback_amount">$0</p>
-              <label for="total_interest_rate">Interest Rate</label>
-              <p id="total_interest_rate">$0</p>
-              <label for="total_payment">Repayment</label>
-              <p id="total_payment">$0</p>
+              <div id="result_show">
+                <p id="payback">Monthly</p>
+                <p id="payback_amount">$0</p>
+                <label for="total_interest_rate">Interest Rate</label>
+                <p id="total_interest_rate">$0</p>
+                <label for="total_payment">Repayment</label>
+                <p id="total_payment">$0</p>
+                <a class="btn" href="mailto: atlantafinancialgroup5@gmail.com"><img src="./img/mail.png" width="40px" alt="Email Us"></a>
+                <a class="btn" href="https://api.whatsapp.com/send/?phone=16822463440&text&type=phone_number&app_absent=0"><img src="./img/whatsapp.png" width="40px" alt="Whatsapp Us"></a>
+              </div>
             </div>
             <script>
               function amount() {
@@ -355,36 +397,28 @@
                 var duration = document.getElementById("duration");
                 var durationValue = duration.value;
                 var monthlyPayment = document.getElementById("payback_amount");
-                var totalInterestRate = document.getElementById("total_interest_rate");
+                var totalInterestRate = document.getElementById(
+                  "total_interest_rate"
+                );
                 var totalPayment = document.getElementById("total_payment");
-                // var compound = document.getElementById("compound");
-
-
-                // var unit; 
-                
-                // if(compound.value = 'Monthly'){
-                //     unit = " m/$ ";
-                // }else{
-                //     unit = " yr/$ ";
-                // }
-
                 if (amountValue >= 5000) {
                   errorMsg.innerText = "OK";
                   errorMsg.style.color = "green";
                   amount.style.borderBottomColor = "green";
-                  let newMonthlyPayment = (amountValue / 100) * 2;
-                  let newAmount = parseInt(newMonthlyPayment) + parseInt(amountValue);
-                  monthlyPayment.innerText = "$" + newAmount / durationValue;
-                  totalInterestRate.innerText = "$" + newMonthlyPayment;
-                  totalPayment.innerText = durationValue + "m / $" + newAmount;
 
                   if (durationValue >= 1) {
                     duration.style.borderBottomColor = "green";
-                    let newMonthlyPayment = (amountValue / 100) * 2;
-                    let newAmount = parseInt(newMonthlyPayment) + parseInt(amountValue);
-                    monthlyPayment.innerText = "$" + newAmount / durationValue;
-                    totalInterestRate.innerText = "$" + newMonthlyPayment;
-                    totalPayment.innerText = durationValue + "m / $" + newAmount;
+                    let newTotalInterestRate =
+                      (amountValue / 100) * 2 * durationValue;
+                    totalInterestRate.innerHTML = "$" + Math.round(newTotalInterestRate);
+                    let newMonthlyPayment =
+                      parseInt(amountValue) + parseInt(newTotalInterestRate);
+
+                    // let x = 
+                    monthlyPayment.innerHTML = "$" + Math.round(newMonthlyPayment / durationValue);
+                    let NewTotalPayment =
+                      parseInt(amountValue) + parseInt(newTotalInterestRate);
+                    totalPayment.innerText = "$" + Math.round(NewTotalPayment);
                   } else {
                     duration.style.borderBottomColor = "red";
                     errorMsg.innerText = "Enter Loan Term";
@@ -419,21 +453,14 @@
                 var duration = document.getElementById("duration");
                 var durationValue = duration.value;
                 var monthlyPayment = document.getElementById("payback_amount");
-                var totalInterestRate = document.getElementById( "total_interest_rate");
+                var totalInterestRate = document.getElementById(
+                  "total_interest_rate"
+                );
                 var totalPayment = document.getElementById("total_payment");
                 var compound = document.getElementById("compound");
-                
 
                 payback.innerText = compound.value;
                 duration.setAttribute("placeholder", compound.value);
-
-                // var unit; 
-                
-                // if(compound.value = 'Monthly'){
-                //     unit = " m/$ ";
-                // }else{
-                //     unit = " yr/$ ";
-                // }
 
                 if (durationValue >= 1) {
                   duration.style.borderBottomColor = "green";
@@ -450,11 +477,17 @@
                     errorMsg.innerText = "OK";
                     errorMsg.style.color = "green";
                     amount.style.borderBottomColor = "green";
-                    let newMonthlyPayment = (amountValue / 100) * 2;
-                    let newAmount = parseInt(newMonthlyPayment) + parseInt(amountValue);
-                    monthlyPayment.innerText = "$" + newAmount / durationValue;
-                    totalInterestRate.innerText = "$" + newMonthlyPayment;
-                    totalPayment.innerText = durationValue + "m / $" + newAmount;
+
+                    let newTotalInterestRate =
+                      (amountValue / 100) * 2 * durationValue;
+                    totalInterestRate.innerText = "$" + Math.round(newTotalInterestRate);
+
+                    let newMonthlyPayment = parseInt(amountValue) + parseInt(newTotalInterestRate);
+                    monthlyPayment.innerHTML = "$" + Math.round(newMonthlyPayment / durationValue);
+
+                    let NewTotalPayment =
+                      parseInt(amountValue) + parseInt(newTotalInterestRate);
+                    totalPayment.innerText = "$" + Math.round(NewTotalPayment);
                   }
                 } else {
                   duration.style.borderBottomColor = "red";
@@ -470,7 +503,7 @@
         </div>
       </section>
       <section>
-        <div class="testimonial">
+        <div id="testimonial">
           <h1>TESTIMONIAL</h1>
           <div class="testify">
             <img src="./img/img1.jpg" alt="Photo" />
@@ -511,7 +544,7 @@
     </main>
     <footer>
       <section>
-        <div class="foots">
+        <div id="foots">
           <div class="foot">
             <h2>ABOUT</h2>
             <p>
@@ -531,12 +564,12 @@
           <div class="foot">
             <h2>CONTACTS</h2>
             <label for="email">Email:</label>
-            <p id="email">atlantagroupfinancefirm@gmail.com</p>
+            <p id="email"><a href="mailto: atlantafinancialgroup5@gmail.com">atlantafinancialgroup5@gmail.com</a></p>
             <label for="phone">Phone:</label>
-            <p id="phone">&phone; +1 (475) 307-8430</p>
+            <p id="phone">&phone; <a href="+14753078430">+1 (682) 246-3440</a></p>
             <p id="phone">
               Whatsapp:
-              <a href="www.wa.me/14753078430">+1 (475) 307-8430</a>
+              <a href="https://api.whatsapp.com/send/?phone=16822463440&text&type=phone_number&app_absent=0">+1 (682) 246-3440</a>
             </p>
           </div>
         </div>
