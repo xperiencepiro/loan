@@ -20,6 +20,7 @@
       * {
         margin: 0%;
         padding: 0%;
+        box-sizing: border-box;
       }
 
       /* border width and color */
@@ -78,23 +79,31 @@
 
       .navbar li {
         list-style: none;
-        padding: 0.1rem 0.2rem;
+        padding: 1rem 0.75rem;
         font-size: large;
+        background-color: rgb(207, 189, 86);
       }
 
-      .navbar li a:hover {
+      .navbar li:hover{
+        background-color: #f4f4f4;
         color: rgb(207, 189, 86);
-        transition: 1s;
-        border-radius: 3.1rem;
+        padding: 1rem 0.75rem;
+      }
+
+      .navbar li:hover a{
+        background-color: #f4f4f4;
+        color: rgb(207, 189, 86);
+        padding: 1rem 0.75rem;
+      }
+
+      .navbar li a {
+        text-decoration: none;
+        color: #f4f4f4;
       }
 
       .navbar {
         display: flex;
         text-align: center;
-      }
-
-      .navbar li a {
-        text-decoration: none;
       }
 
       /* Advert */
